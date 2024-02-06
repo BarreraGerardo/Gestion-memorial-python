@@ -1,0 +1,17 @@
+# Gestion-memorial-python
+import tkinter as tk
+from tkinter import simpledialog
+
+class MemoriaEstatica:
+    def __init__(self):
+        self.calificaciones = []
+
+    def main(self):
+        for _ in range(5):
+            calificacion = simpledialog.askinteger("Captura de calificación", "Introduce una calificación:")
+            self.calificaciones.append(calificacion)
+
+if __name__ == "__main__":
+    memoria = MemoriaEstatica()
+    memoria.main()
+    print("Calificaciones ingresadas:", memoria.calificaciones)
